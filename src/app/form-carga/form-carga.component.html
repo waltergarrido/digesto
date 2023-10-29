@@ -5,7 +5,7 @@
   <main>
     <div class="py-5 text-center">
    
-    <h2>Digesto</h2>
+    <h1>Digesto</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui eros, efficitur quis rhoncus ac, ullamcorper ut leo. Vivamus egestas ipsum eu massa accumsan maximus</p>
     </div>
 
@@ -81,6 +81,28 @@
                     <option value="2">No vigente</option>
                     <option value="3">Ambos</option>
                   </select>
+      
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Categoria</label>
+              <select class="form-select" aria-label="Default select example" [(ngModel)]="seleccion" name="seleccion" (change)="subCat()">               
+                <option selected>seleccionar</option>
+                <option *ngFor="let opcion of DigestoCategoria" [ngValue]="opcion">{{ opcion.nombre }}</option>
+              </select>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="inputState" class="form-label">Tipo</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>seleccionar</option>
+                    <option *ngFor="let tipo of tipos" [value]="tipo" >{{ tipo }}</option>
+                  </select>
               
               <div class="invalid-feedback">
                 Valid last name is required.
@@ -104,16 +126,18 @@
             </div>
 
             <div class="col-12">
-              <label for="address" class="form-label">Descripción</label>
-              <input type="text" class="form-control" id="address" placeholder="Ingrese una breve descripción del Digesto" required>
+              <label for="exampleFormControlTextarea1">Descripcion</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
 
-            <div class="col-12">
-                <label for="address" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="address" placeholder="Adjuntar archivo" required>
+
+            <div class="col-6">
+              <label for="exampleFormControlFile1">Adjuntar Digesto</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
                 <div class="invalid-feedback">
                   Por favor adjuntar archivo
                 </div>
