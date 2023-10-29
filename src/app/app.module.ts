@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { FormCargaComponent } from './form-carga/form-carga.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
-
+import { TagInputModule } from 'ngx-chips';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,9 @@ import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    TagInputModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

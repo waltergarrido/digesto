@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-carga.component.css']
 })
 export class FormCargaComponent {
+  public numeroOrdenanza:number=0;
+  tags: string[] = [];
    public tipos= [];
    public seleccion:any ='seleccionar' ;
   DigestoCategoria=[
@@ -42,4 +44,5 @@ export class FormCargaComponent {
   subCat(){
    this.tipos=this.seleccion.tipos;  
   }
+
 }
